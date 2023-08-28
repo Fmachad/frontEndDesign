@@ -12,7 +12,7 @@ body {
 .container {
     margin: 80px auto;
     max-width: 640px;
-    width: 100%;
+    width: 50%;
 }
 
 form {
@@ -26,8 +26,18 @@ input, textarea, button {
     padding: 13px;
     margin-bottom: 10px;
     width: 100%;
-    resize: none;
-}
+  }
+
+  p{
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #101ee04e;
+    display: block;
+  }
+  
+  #A {
+    margin-top: 15px;
+  }
 
 button {
     background-color: #101ee0;
@@ -44,19 +54,3 @@ button:hover {
     background-color: #27a9ae;
 }
 
-.success-message {
-    background-color: #0b636698;
-    padding: 16px;
-    color: #fff;
-    border-radius: 20px;
-    display: none;
-}
-
-.error-message{
-        padding: 8px;
-        background-color: red;
-        color: #fff;
-        margin-bottom: 8px;
-        font-size: 12px;
-        display: none;
-}

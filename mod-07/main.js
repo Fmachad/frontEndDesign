@@ -12,18 +12,19 @@ form.addEventListener("submit", function(e) {
     const nomeBeneficiario = document.getElementById('nome-beneficiario');
     const numeroContaBeneficiario = document.getElementById('numero-conta');
     const valorDeposito = document.getElementById('valor-deposito');
-    const mensagemSucesso = 'Montante de: ${valorDeposito.value} depositado para o cliente: ${nomeBeneficiario.value} - conta: {numeroContaBeneficiario.value}'
+    const mensagemSucesso = 'Montante de: <b>${valorDeposito.value}</b> depositado para o cliente: <b>${nomeBeneficiario.value}</> - conta: <b>{numeroContaBeneficiario.value}</b>';
 
     formEValido = validaNome(nomeBeneficiario.value) 
     if (formEValido) {
-        alert(mensagemSucesso); 
 
+        const containerMensagemSucesso = document.querySelector('.success-mesage');
+        containerMensagemSucesso.innerHTML = mensagemSucesso;
+        containerMensagemSucesso.style.display = 'block';
+  
         nomeBeneficiario.value = ' ';
-        numeroContaBeneficiario.value = ' ';
+        numeroContaBeneficiario.value = ' ';    
         valorDeposito.value = ' '; 
     } else {
-        alert('O nome nao esta completo');
+       document.querySelector('.error-mesage').style.display = 'block';
     }
 })
-
-console.log(form);
